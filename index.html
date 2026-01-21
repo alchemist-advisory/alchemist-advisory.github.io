@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alchemist Advisory | Human to Human</title>
 
-  <!-- =========================
-       LUXURY DESIGN SYSTEM
-  ========================== -->
   <style>
     :root {
       --black: #0b0b0c;
       --ivory: #f4f2ef;
       --gold: #bfa36a;
       --gray: #9a9a9a;
+      --line: #1a1a1a;
     }
 
     * {
@@ -23,35 +21,53 @@
     }
 
     body {
-      background-color: var(--black);
+      background: var(--black);
       color: var(--ivory);
       font-family: "Helvetica Neue", Arial, sans-serif;
       letter-spacing: 0.02em;
       line-height: 1.6;
     }
 
+    header {
+      padding: 40px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lang-switch button {
+      background: none;
+      border: none;
+      color: var(--gray);
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+    .lang-switch button.active {
+      color: var(--gold);
+    }
+
     section {
       padding: 120px 10%;
     }
 
-    h1, h2 {
-      font-weight: 300;
-    }
-
     h1 {
       font-size: 3rem;
+      font-weight: 300;
       max-width: 900px;
     }
 
     h2 {
       font-size: 1.8rem;
+      font-weight: 300;
       margin-bottom: 30px;
     }
 
     p {
-      font-size: 1rem;
-      max-width: 700px;
+      max-width: 720px;
       color: var(--gray);
+      margin-bottom: 20px;
     }
 
     .gold {
@@ -61,120 +77,133 @@
     .divider {
       width: 60px;
       height: 2px;
-      background-color: var(--gold);
+      background: var(--gold);
       margin: 40px 0;
+    }
+
+    form {
+      max-width: 500px;
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--ivory);
+      padding: 14px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button.submit {
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 14px 30px;
+      cursor: pointer;
+      font-size: 0.9rem;
     }
 
     footer {
       padding: 60px 10%;
+      border-top: 1px solid var(--line);
       font-size: 0.8rem;
       color: var(--gray);
-      border-top: 1px solid #1a1a1a;
     }
 
     .lang {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: var(--gray);
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       HERO
-  ========================== -->
-  <section>
-    <h1>
-      We architect <span class="gold">clarity</span><br/>
-      within complex systems.
-    </h1>
+<header>
+  <div>Alchemist Advisory</div>
+  <div class="lang-switch">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-pt" onclick="setLang('pt')">PT</button>
+  </div>
+</header>
 
+<!-- HERO -->
+<section>
+  <div id="en" class="lang active">
+    <h1>We architect <span class="gold">clarity</span><br/>within complex systems.</h1>
     <div class="divider"></div>
-
     <p>
-      Alchemist Advisory is a human-to-human advisory firm operating at the intersection
-      of strategy, transformation and meaning.
+      A human-to-human advisory firm operating at the intersection of
+      strategy, transformation and meaning.
     </p>
+  </div>
 
-    <div class="lang">
-      <p>
-        Arquitetamos <span class="gold">clareza</span><br/>
-        dentro de sistemas complexos.
-      </p>
-    </div>
-  </section>
+  <div id="pt" class="lang">
+    <h1>Arquitetamos <span class="gold">clareza</span><br/>em sistemas complexos.</h1>
+    <div class="divider"></div>
+    <p>
+      Uma consultoria human-to-human atuando entre
+      estratégia, transformação e significado.
+    </p>
+  </div>
+</section>
 
-  <!-- =========================
-       MANIFESTO
-  ========================== -->
-  <section>
+<!-- MANIFESTO -->
+<section>
+  <div id="en" class="lang active">
     <h2>Manifesto</h2>
+    <p>Transformation is not acceleration.<br/>It is precision and intention.</p>
+  </div>
 
-    <p>
-      Transformation is not acceleration.<br/>
-      It is precision, intention and discipline.
-    </p>
+  <div id="pt" class="lang">
+    <h2>Manifesto</h2>
+    <p>Transformação não é velocidade.<br/>É precisão e intenção.</p>
+  </div>
+</section>
 
-    <div class="divider"></div>
-
-    <p>
-      We do not sell frameworks.<br/>
-      We design decision environments where leaders regain sovereignty.
-    </p>
-
-    <div class="lang">
-      <p>
-        Transformação não é velocidade.<br/>
-        É precisão, intenção e disciplina.
-      </p>
-    </div>
-  </section>
-
-  <!-- =========================
-       SERVICES
-  ========================== -->
-  <section>
-    <h2>What We Do</h2>
-
-    <p>
-      Strategic Advisory · Change Architecture · Executive Sensemaking ·
-      Human-Centered Transformation
-    </p>
-
-    <div class="lang">
-      <p>
-        Advisory Estratégico · Arquitetura de Mudança ·
-        Tomada de Decisão Executiva · Transformação Humana
-      </p>
-    </div>
-  </section>
-
-  <!-- =========================
-       CONTACT
-  ========================== -->
-  <section>
+<!-- CONTACT -->
+<section>
+  <div id="en" class="lang active">
     <h2>Start a Conversation</h2>
+    <p>We engage selectively.</p>
 
-    <p>
-      We engage selectively.<br/>
-      Every dialogue begins with intent.
-    </p>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button class="submit">Send</button>
+    </form>
+  </div>
 
-    <div class="divider"></div>
+  <div id="pt" class="lang">
+    <h2>Iniciar uma Conversa</h2>
+    <p>Atuamos de forma seletiva.</p>
 
-    <p class="gold">
-      contact@alchemist-advisory.com
-    </p>
-  </section>
+    <form>
+      <input type="text" placeholder="Nome">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Mensagem"></textarea>
+      <button class="submit">Enviar</button>
+    </form>
+  </div>
+</section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer>
-    © Alchemist Advisory — Human to Human
-  </footer>
+<footer>
+  © Alchemist Advisory — Human to Human
+</footer>
 
-</body>
-</html>
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('#' + lang).
+
