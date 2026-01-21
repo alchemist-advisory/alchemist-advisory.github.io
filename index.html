@@ -94,5 +94,79 @@
   </footer>
 
 </body>
-</html>
+<body>
+
+  <header style="padding:40px 10%; font-size:0.9rem;">
+    <span onclick="setLanguage('en')" style="cursor:pointer;">EN</span> |
+    <span onclick="setLanguage('pt')" style="cursor:pointer;">PT</span>
+  </header>
+
+  <!-- ENGLISH -->
+  <div id="en" class="lang">
+    <section class="hero">
+      <h1>
+        We architect clarity<br>
+        within complex systems.
+      </h1>
+    </section>
+
+    <section class="manifesto">
+      <p>
+        Transformation is not an event.<br>
+        It is a disciplined process<br>
+        guided by deliberate thinking.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>Start a conversation.</h2>
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- PORTUGUÊS -->
+  <div id="pt" class="lang" style="display:none;">
+    <section class="hero">
+      <h1>
+        Arquitetamos clareza<br>
+        em sistemas complexos.
+      </h1>
+    </section>
+
+    <section class="manifesto">
+      <p>
+        Transformação não é um evento.<br>
+        É um processo disciplinado,<br>
+        guiado por pensamento estratégico.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>Inicie uma conversa.</h2>
+      <form>
+        <input type="text" placeholder="Nome">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    © Alchemist Advisory — Human to Human
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('pt').style.display = lang === 'pt' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
 
