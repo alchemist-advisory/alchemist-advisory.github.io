@@ -1,96 +1,97 @@
-:root {
-  --black: #0b0b0c;
-  --ivory: #f4f2ef;
-  --gold: #bfa36a;
-  --gray: #9a9a9a;
-}
-
+/* =========================
+   RESET BÁSICO
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
-  background-color: var(--black);
-  color: var(--ivory);
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.03em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
-section {
-  padding: 120px 10%;
+/* =========================
+   LANGUAGE SWITCH
+========================= */
+.lang-switch {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 1000;
 }
 
+.lang-switch button {
+  background: none;
+  border: none;
+  color: #c9b37e;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* =========================
+   SECTIONS (ESSENCIAL)
+========================= */
+section {
+  min-height: 100vh;
+  padding: 120px 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
   font-weight: 300;
+  letter-spacing: -0.02em;
   max-width: 900px;
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
 
 p {
-  font-size: 1rem;
   max-width: 700px;
-  color: var(--gray);
+  font-size: 1.05rem;
+  opacity: 0.85;
 }
 
+/* =========================
+   GOLD ACCENT
+========================= */
 .gold {
-  color: var(--gold);
+  color: #c9b37e;
 }
 
+/* =========================
+   DIVIDER
+========================= */
 .divider {
-  width: 60px;
-  height: 2px;
-  background-color: var(--gold);
-  margin: 40px 0;
+  width: 80px;
+  height: 1px;
+  background-color: #c9b37e;
+  margin: 32px 0;
 }
 
-footer {
-  padding: 60px 10%;
-  font-size: 0.8rem;
-  color: var(--gray);
-  border-top: 1px solid #1a1a1a;
-}
-
-/* LANGUAGE SWITCH */
-.lang-switch {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  z-index: 100;
-}
-
-.lang-switch button {
-  background: transparent;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  padding: 6px 12px;
-  margin-left: 8px;
-  cursor: pointer;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-}
-
-.lang-switch button:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.hidden {
-  display: none;
-}
-
-/* FORM */
+/* =========================
+   FORM
+========================= */
 form {
   max-width: 500px;
-  margin-top: 40px;
 }
 
 input,
@@ -98,42 +99,47 @@ textarea {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #444;
+  color: #f5f5f5;
   padding: 12px 0;
-  margin-bottom: 30px;
-  color: var(--ivory);
-  font-size: 0.9rem;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #666;
-}
-
-textarea {
-  min-height: 120px;
+  color: #777;
 }
 
 button {
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  padding: 12px 30px;
-  cursor: pointer;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  background: none;
+  border: 1px solid #c9b37e;
+  color: #c9b37e;
+  padding: 14px 32px;
   font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
 }
 
-button:hover {
-  background: var(--gold);
-  color: var(--black);
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 48px 10vw;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* =========================
+   VISIBILITY CONTROL
+========================= */
+.hidden {
+  display: none;
 }
 
 /* =========================
    LUXURY FADE ANIMATIONS
 ========================= */
-
 .fade {
   opacity: 0;
   transform: translateY(20px);
@@ -145,15 +151,7 @@ button:hover {
   transform: translateY(0);
 }
 
-/* Delays para ritmo visual */
-.delay-1 {
-  transition-delay: 0.2s;
-}
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
 
-.delay-2 {
-  transition-delay: 0.4s;
-}
-
-.delay-3 {
-  transition-delay: 0.6s;
-}
