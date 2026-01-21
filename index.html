@@ -2,182 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alchemist Advisory | Human to Human</title>
 
-  <style>
-    :root {
-      --black: #0b0b0c;
-      --ivory: #f4f2ef;
-      --gold: #bfa36a;
-      --gray: #9a9a9a;
-      --line: #1a1a1a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: var(--black);
-      color: var(--ivory);
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      letter-spacing: 0.02em;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 40px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .lang-switch button {
-      background: none;
-      border: none;
-      color: var(--gray);
-      font-size: 0.9rem;
-      cursor: pointer;
-      margin-left: 15px;
-    }
-
-    .lang-switch button.active {
-      color: var(--gold);
-    }
-
-    section {
-      padding: 120px 10%;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 300;
-      max-width: 900px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
-
-    p {
-      max-width: 720px;
-      color: var(--gray);
-      margin-bottom: 20px;
-    }
-
-    .gold {
-      color: var(--gold);
-    }
-
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: var(--gold);
-      margin: 40px 0;
-    }
-
-    form {
-      max-width: 500px;
-      margin-top: 40px;
-    }
-
-    input, textarea {
-      width: 100%;
-      background: none;
-      border: 1px solid var(--line);
-      color: var(--ivory);
-      padding: 14px;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    textarea {
-      height: 120px;
-      resize: none;
-    }
-
-    button.submit {
-      background: none;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 14px 30px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      padding: 60px 10%;
-      border-top: 1px solid var(--line);
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    .lang {
-      display: none;
-    }
-
-    .lang.active {
-      display: block;
-    }
-  </style>
-
- <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <!-- LANGUAGE SWITCH -->
-  <div>Alchemist Advisory</div>
   <div class="lang-switch">
-    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-    <button id="btn-pt" onclick="setLang('pt')">PT</button>
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('pt')">PT</button>
   </div>
-</header>
 
- <!-- =========================
+  <!-- =========================
        HERO
   ========================== -->
-<section>
-  <div id="en" class="lang active">
-    <h1>We architect <span class="gold">clarity</span><br/>within complex systems.</h1>
-    <div class="divider"></div>
-    <p>
-      A human-to-human advisory firm operating at the intersection of
-      strategy, transformation and meaning.
-    </p>
-  </div>
+  <section class="lang-en">
+    <h1>
+      We architect <span class="gold">clarity</span><br />
+      within complex systems.
+    </h1>
 
-  <div id="pt" class="lang">
-    <h1>Arquitetamos <span class="gold">clareza</span><br/>em sistemas complexos.</h1>
     <div class="divider"></div>
-    <p>
-      Uma consultoria human-to-human atuando entre
-      estratégia, transformação e significado.
-    </p>
-  </div>
-</section>
 
-<!-- =========================
+    <p>
+      Alchemist Advisory is a human-to-human advisory firm operating at the
+      intersection of strategy, transformation and meaning.
+    </p>
+  </section>
+
+  <section class="lang-pt hidden">
+    <h1>
+      Arquitetamos <span class="gold">clareza</span><br />
+      dentro de sistemas complexos.
+    </h1>
+
+    <div class="divider"></div>
+
+    <p>
+      A Alchemist Advisory é uma consultoria human-to-human que atua na interseção
+      entre estratégia, transformação e significado.
+    </p>
+  </section>
+
+  <!-- =========================
        MANIFESTO
   ========================== -->
-<section>
-  <div id="en" class="lang active">
+  <section class="lang-en">
     <h2>Manifesto</h2>
-    <p>Transformation is not acceleration.<br/>It is precision and intention.</p>
-  </div>
 
-  <div id="pt" class="lang">
+    <p>
+      Transformation is not acceleration.<br />
+      It is precision, intention and discipline.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+      We do not sell frameworks.<br />
+      We design decision environments where leaders regain sovereignty.
+    </p>
+  </section>
+
+  <section class="lang-pt hidden">
     <h2>Manifesto</h2>
-    <p>Transformação não é velocidade.<br/>É precisão e intenção.</p>
-  </div>
-</section>
 
- <!-- =========================
+    <p>
+      Transformação não é aceleração.<br />
+      É precisão, intenção e disciplina.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+      Não vendemos frameworks.<br />
+      Arquitetamos ambientes de decisão onde líderes retomam soberania.
+    </p>
+  </section>
+
+  <!-- =========================
        CONTACT
   ========================== -->
   <section class="lang-en">
@@ -225,10 +130,11 @@
   <!-- =========================
        FOOTER
   ========================== -->
-  © Alchemist Advisory — Human to Human
-</footer>
+  <footer>
+    © Alchemist Advisory — Human to Human
+  </footer>
 
-<!-- =========================
+  <!-- =========================
        SCRIPT
   ========================== -->
   <script>
