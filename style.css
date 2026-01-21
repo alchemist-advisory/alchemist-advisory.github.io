@@ -129,3 +129,31 @@ button:hover {
   background: var(--gold);
   color: var(--black);
 }
+
+/* =========================
+   LUXURY FADE ANIMATIONS
+========================= */
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays para ritmo visual */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
+}
