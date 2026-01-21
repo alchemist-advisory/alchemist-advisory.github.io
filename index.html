@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body onload="setLanguage('en')">
 
   <!-- LANGUAGE SWITCH -->
-  <div class="lang-switch">
+  <div class="lang-switch fade delay-1">
     <button onclick="setLanguage('en')">EN</button>
     <button onclick="setLanguage('pt')">PT</button>
   </div>
@@ -20,28 +20,28 @@
        HERO
   ========================== -->
   <section class="lang-en">
-    <h1>
+    <h1 class="fade delay-1">
       We architect <span class="gold">clarity</span><br />
       within complex systems.
     </h1>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-2"></div>
 
-    <p>
+    <p class="fade delay-3">
       Alchemist Advisory is a human-to-human advisory firm operating at the
       intersection of strategy, transformation and meaning.
     </p>
   </section>
 
   <section class="lang-pt hidden">
-    <h1>
+    <h1 class="fade delay-1">
       Arquitetamos <span class="gold">clareza</span><br />
       dentro de sistemas complexos.
     </h1>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-2"></div>
 
-    <p>
+    <p class="fade delay-3">
       A Alchemist Advisory é uma consultoria human-to-human que atua na interseção
       entre estratégia, transformação e significado.
     </p>
@@ -51,32 +51,32 @@
        MANIFESTO
   ========================== -->
   <section class="lang-en">
-    <h2>Manifesto</h2>
+    <h2 class="fade delay-1">Manifesto</h2>
 
-    <p>
+    <p class="fade delay-2">
       Transformation is not acceleration.<br />
       It is precision, intention and discipline.
     </p>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-3"></div>
 
-    <p>
+    <p class="fade delay-3">
       We do not sell frameworks.<br />
       We design decision environments where leaders regain sovereignty.
     </p>
   </section>
 
   <section class="lang-pt hidden">
-    <h2>Manifesto</h2>
+    <h2 class="fade delay-1">Manifesto</h2>
 
-    <p>
+    <p class="fade delay-2">
       Transformação não é aceleração.<br />
       É precisão, intenção e disciplina.
     </p>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-3"></div>
 
-    <p>
+    <p class="fade delay-3">
       Não vendemos frameworks.<br />
       Arquitetamos ambientes de decisão onde líderes retomam soberania.
     </p>
@@ -86,16 +86,19 @@
        CONTACT
   ========================== -->
   <section class="lang-en">
-    <h2>Start a Conversation</h2>
+    <h2 class="fade delay-1">Start a Conversation</h2>
 
-    <p>
+    <p class="fade delay-2">
       We engage selectively.<br />
       Every dialogue begins with intent.
     </p>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-3"></div>
 
-    <form action="https://formspree.io/f/mlggzjko" method="POST">
+    <form class="fade delay-3"
+      action="https://formspree.io/f/mlggzjko"
+      method="POST">
+
       <input type="hidden" name="language" value="English" />
 
       <input type="text" name="name" placeholder="Your name" required />
@@ -107,16 +110,19 @@
   </section>
 
   <section class="lang-pt hidden">
-    <h2>Iniciar uma Conversa</h2>
+    <h2 class="fade delay-1">Iniciar uma Conversa</h2>
 
-    <p>
+    <p class="fade delay-2">
       Atuamos de forma seletiva.<br />
       Todo diálogo começa com intenção.
     </p>
 
-    <div class="divider"></div>
+    <div class="divider fade delay-3"></div>
 
-    <form action="https://formspree.io/f/mlggzjko" method="POST">
+    <form class="fade delay-3"
+      action="https://formspree.io/f/mlggzjko"
+      method="POST">
+
       <input type="hidden" name="language" value="Português" />
 
       <input type="text" name="name" placeholder="Seu nome" required />
@@ -130,7 +136,7 @@
   <!-- =========================
        FOOTER
   ========================== -->
-  <footer>
+  <footer class="fade delay-2">
     © Alchemist Advisory — Human to Human
   </footer>
 
@@ -145,8 +151,26 @@
       document.querySelectorAll('.lang-pt').forEach(el =>
         el.classList.toggle('hidden', lang !== 'pt')
       );
+      revealOnScroll();
     }
+
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade');
+
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight - 80) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 
 </body>
 </html>
+
