@@ -125,11 +125,13 @@
       display: block;
     }
   </style>
+
+ <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header>
+  <!-- LANGUAGE SWITCH -->
   <div>Alchemist Advisory</div>
   <div class="lang-switch">
     <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
@@ -137,7 +139,9 @@
   </div>
 </header>
 
-<!-- HERO -->
+ <!-- =========================
+       HERO
+  ========================== -->
 <section>
   <div id="en" class="lang active">
     <h1>We architect <span class="gold">clarity</span><br/>within complex systems.</h1>
@@ -158,7 +162,9 @@
   </div>
 </section>
 
-<!-- MANIFESTO -->
+<!-- =========================
+       MANIFESTO
+  ========================== -->
 <section>
   <div id="en" class="lang active">
     <h2>Manifesto</h2>
@@ -171,39 +177,70 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section>
-  <div id="en" class="lang active">
+ <!-- =========================
+       CONTACT
+  ========================== -->
+  <section class="lang-en">
     <h2>Start a Conversation</h2>
-    <p>We engage selectively.</p>
 
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button class="submit">Send</button>
+    <p>
+      We engage selectively.<br />
+      Every dialogue begins with intent.
+    </p>
+
+    <div class="divider"></div>
+
+    <form action="https://formspree.io/f/mlggzjko" method="POST">
+      <input type="hidden" name="language" value="English" />
+
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Tell us about your context" required></textarea>
+
+      <button type="submit">Send</button>
     </form>
-  </div>
+  </section>
 
-  <div id="pt" class="lang">
+  <section class="lang-pt hidden">
     <h2>Iniciar uma Conversa</h2>
-    <p>Atuamos de forma seletiva.</p>
 
-    <form>
-      <input type="text" placeholder="Nome">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Mensagem"></textarea>
-      <button class="submit">Enviar</button>
+    <p>
+      Atuamos de forma seletiva.<br />
+      Todo diálogo começa com intenção.
+    </p>
+
+    <div class="divider"></div>
+
+    <form action="https://formspree.io/f/mlggzjko" method="POST">
+      <input type="hidden" name="language" value="Português" />
+
+      <input type="text" name="name" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="message" placeholder="Conte-nos sobre seu contexto" required></textarea>
+
+      <button type="submit">Enviar</button>
     </form>
-  </div>
-</section>
+  </section>
 
-<footer>
+  <!-- =========================
+       FOOTER
+  ========================== -->
   © Alchemist Advisory — Human to Human
 </footer>
 
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('#' + lang).
+<!-- =========================
+       SCRIPT
+  ========================== -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-en').forEach(el =>
+        el.classList.toggle('hidden', lang !== 'en')
+      );
+      document.querySelectorAll('.lang-pt').forEach(el =>
+        el.classList.toggle('hidden', lang !== 'pt')
+      );
+    }
+  </script>
 
+</body>
+</html>
