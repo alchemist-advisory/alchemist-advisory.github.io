@@ -1,12 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alchemist Advisory | Human to Human</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #0B0B0C;
+      color: #F4F2EF;
+    }
+
+    header {
+      padding: 40px 10%;
+      font-size: 0.9rem;
+    }
+
+    header span {
+      cursor: pointer;
+      margin-right: 8px;
+    }
+
+    section {
+      padding: 120px 10%;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.3;
+      max-width: 800px;
+    }
+
+    .manifesto p {
+      font-size: 1.2rem;
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #BFA36A;
+      color: #F4F2EF;
+      padding: 14px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #BFA36A;
+      color: #0B0B0C;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 60px 10%;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
 <body>
 
-  <header style="padding:40px 10%; font-size:0.9rem;">
-    <span onclick="setLanguage('en')" style="cursor:pointer;">EN</span> |
-    <span onclick="setLanguage('pt')" style="cursor:pointer;">PT</span>
+  <header>
+    <span onclick="setLanguage('en')">EN</span> |
+    <span onclick="setLanguage('pt')">PT</span>
   </header>
 
   <!-- ENGLISH -->
-  <div id="en" class="lang">
+  <div id="en">
     <section class="hero">
       <h1>
         We architect clarity<br>
@@ -34,7 +103,7 @@
   </div>
 
   <!-- PORTUGUÊS -->
-  <div id="pt" class="lang" style="display:none;">
+  <div id="pt" style="display:none;">
     <section class="hero">
       <h1>
         Arquitetamos clareza<br>
@@ -73,3 +142,4 @@
   </script>
 
 </body>
+</html>
