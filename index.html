@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -8,26 +8,22 @@
 
   <!-- SEO BASIC -->
   <meta name="description" content="Alchemist Advisory H2H is a strategic transformation boutique operating at the intersection of strategy, organizational change and human-centered transformation." />
-
   <meta name="keywords" content="organizational transformation, human centered transformation, strategic advisory, change management, H2H transformation" />
-
   <meta name="author" content="Alchemist Advisory H2H" />
-
-  <!-- LANGUAGE -->
   <meta http-equiv="content-language" content="en, pt-BR" />
 
-  <!-- SOCIAL PREVIEW -->
+  <!-- SOCIAL -->
   <meta property="og:title" content="Alchemist Advisory H2H — Human to Human Transformation" />
-  <meta property="og:description" content="We architect clarity within complex systems. Strategic, cultural and digital transformation with human focus." />
+  <meta property="og:description" content="We architect clarity within complex systems." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://SEU_USUARIO.github.io/SEU_REPOSITORIO/" />
+  <meta property="og:url" content="https://alchemist-advisory.github.io/" />
 
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body onload="setLanguage('en')">
+<body onload="setLanguage('en')">
 
   <!-- LANGUAGE SWITCH -->
   <div class="lang-switch fade delay-1">
@@ -46,7 +42,11 @@
         within complex systems.
       </h1>
 
-      <div class="divider fade delay-2"></div>
+      <p class="microcopy fade delay-2">
+        Strategy begins with discernment.
+      </p>
+
+      <div class="divider fade delay-3"></div>
 
       <p class="fade delay-3">
         Alchemist Advisory is a human-to-human advisory firm operating at the
@@ -60,7 +60,11 @@
         dentro de sistemas complexos.
       </h1>
 
-      <div class="divider fade delay-2"></div>
+      <p class="microcopy fade delay-2">
+        Estratégia começa com discernimento.
+      </p>
+
+      <div class="divider fade delay-3"></div>
 
       <p class="fade delay-3">
         A Alchemist Advisory é uma consultoria human-to-human que atua na interseção
@@ -72,7 +76,11 @@
          MANIFESTO
     ========================== -->
     <section class="lang-en" lang="en">
-      <h2 class="fade delay-1">Manifesto</h2>
+      <p class="microcopy fade delay-1">
+        Complexity does not need more speed. It needs clarity.
+      </p>
+
+      <h2 class="fade delay-2">Manifesto</h2>
 
       <p class="fade delay-2">
         Transformation is not acceleration.<br />
@@ -85,10 +93,18 @@
         We do not sell frameworks.<br />
         We design decision environments where leaders regain sovereignty.
       </p>
+
+      <p class="microcopy fade delay-3">
+        Transformation is not a project. It is a capacity.
+      </p>
     </section>
 
     <section class="lang-pt hidden" lang="pt-BR">
-      <h2 class="fade delay-1">Manifesto</h2>
+      <p class="microcopy fade delay-1">
+        Complexidade não precisa de velocidade. Precisa de clareza.
+      </p>
+
+      <h2 class="fade delay-2">Manifesto</h2>
 
       <p class="fade delay-2">
         Transformação não é aceleração.<br />
@@ -100,6 +116,10 @@
       <p class="fade delay-3">
         Não vendemos frameworks.<br />
         Arquitetamos ambientes de decisão onde líderes retomam soberania.
+      </p>
+
+      <p class="microcopy fade delay-3">
+        Transformação não é um projeto. É uma capacidade.
       </p>
     </section>
 
@@ -116,6 +136,10 @@
 
       <div class="divider fade delay-3"></div>
 
+      <p class="microcopy fade delay-3">
+        We engage selectively. Every conversation is intentional.
+      </p>
+
       <form class="fade delay-3"
         action="https://formspree.io/f/mlggzjko"
         method="POST">
@@ -124,9 +148,9 @@
 
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="Tell us about your context" required></textarea>
+        <textarea name="message" placeholder="Describe your context. Clarity matters." required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">Initiate dialogue</button>
       </form>
     </section>
 
@@ -140,6 +164,10 @@
 
       <div class="divider fade delay-3"></div>
 
+      <p class="microcopy fade delay-3">
+        Atuamos de forma seletiva. Toda conversa é intencional.
+      </p>
+
       <form class="fade delay-3"
         action="https://formspree.io/f/mlggzjko"
         method="POST">
@@ -148,9 +176,9 @@
 
         <input type="text" name="name" placeholder="Seu nome" required />
         <input type="email" name="email" placeholder="Seu e-mail" required />
-        <textarea name="message" placeholder="Conte-nos sobre seu contexto" required></textarea>
+        <textarea name="message" placeholder="Descreva seu contexto. Clareza importa." required></textarea>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Iniciar diálogo</button>
       </form>
     </section>
 
@@ -160,7 +188,8 @@
        FOOTER
   ========================== -->
   <footer class="fade delay-2">
-    © Alchemist Advisory — Human to Human
+    © Alchemist Advisory — Human to Human<br />
+    <span class="microcopy">Human to Human Advisory.</span>
   </footer>
 
   <!-- =========================
@@ -179,12 +208,9 @@
 
     function revealOnScroll() {
       const elements = document.querySelectorAll('.fade');
-
       elements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        if (rect.top < windowHeight - 80) {
+        if (rect.top < window.innerHeight - 80) {
           el.classList.add('visible');
         }
       });
