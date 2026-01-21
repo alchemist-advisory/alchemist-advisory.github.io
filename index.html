@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body onload="setLanguage('en')">
 
   <!-- LANGUAGE SWITCH -->
   <div class="lang-switch">
@@ -16,9 +16,7 @@
     <button onclick="setLanguage('pt')">PT</button>
   </div>
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
   <section class="lang-en">
     <h1>
       We architect <span class="gold">clarity</span><br />
@@ -47,9 +45,7 @@
     </p>
   </section>
 
-  <!-- =========================
-       MANIFESTO
-  ========================== -->
+  <!-- MANIFESTO -->
   <section class="lang-en">
     <h2>Manifesto</h2>
 
@@ -82,9 +78,7 @@
     </p>
   </section>
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
+  <!-- CONTACT -->
   <section class="lang-en">
     <h2>Start a Conversation</h2>
 
@@ -127,16 +121,12 @@
     </form>
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
   <footer>
     © Alchemist Advisory — Human to Human
   </footer>
 
-  <!-- =========================
-       SCRIPT
-  ========================== -->
+  <!-- SCRIPT -->
   <script>
     function setLanguage(lang) {
       document.querySelectorAll('.lang-en').forEach(el =>
